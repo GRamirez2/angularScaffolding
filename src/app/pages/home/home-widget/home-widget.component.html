@@ -1,0 +1,6 @@
+<p>home-widget works!</p>
+
+
+<div *ngFor="let data of apiData$ | async; index as i">
+    <p *ngIf="i === 1">Only showing index 1 from same data set in the home parent component. -> '{{ data.title }}'</p>
+<div>
