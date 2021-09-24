@@ -6,10 +6,11 @@ import { NgModule } from '@angular/core';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HomeWidgetComponent } from './home-widget/home-widget.component';
+import { SubHomeComponent } from './sub-home/sub-home.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HomeWidgetComponent],
+  declarations: [HomeComponent, HomeWidgetComponent, SubHomeComponent],
   imports: [
     CommonModule,
     SharedComponentsModule,

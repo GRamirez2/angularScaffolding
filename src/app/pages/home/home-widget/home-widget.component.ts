@@ -1,6 +1,5 @@
+import { Component, Input, OnInit } from '@angular/core';
 import { SampleStoreService } from '../../../shared/services';
-import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-home-widget',
   templateUrl: './home-widget.component.html',
@@ -12,9 +11,12 @@ export class HomeWidgetComponent implements OnInit {
     private sampleStoreService: SampleStoreService
   ) { }
 
-  apiData$ = this.sampleStoreService.dataSample$
+  apiData$
+
 
   ngOnInit(): void {
+    this.apiData$ = this.sampleStoreService.dataSample$
   }
+
 
 }

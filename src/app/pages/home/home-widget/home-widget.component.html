@@ -1,6 +1,9 @@
 <p>home-widget works!</p>
 
 
+Only showing even indexes.
 <div *ngFor="let data of apiData$ | async; index as i">
-    <p *ngIf="i === 1">Only showing index 1 from same data set in the home parent component. -> '{{ data.title }}'</p>
+    <li *ngIf="i % 2 == 0">{{ data.title }}</li>
 <div>
+
+

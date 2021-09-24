@@ -8,6 +8,10 @@
 <li *ngFor="let data of apiData$ | async">{{data.title}}, {{data.id}}</li>
 
 <hr>
-<app-home-widget></app-home-widget>
+<button (click)="toggle()">Toggle Component</button>
+
+    <app-home-widget [hidden]=!toggleFlag></app-home-widget>
+
+
 
 

@@ -12,7 +12,9 @@ export class HomeComponent implements OnInit {
     private sampleStoreService: SampleStoreService
   ) { }
 
+
   apiData$ = this.sampleStoreService.dataSample$
+  toggleFlag: boolean = true;
 
   ngOnInit(): void {
     this.sampleStoreService.loadPosts();
@@ -25,6 +27,10 @@ export class HomeComponent implements OnInit {
 
   reloadData(){
     this.sampleStoreService.loadPosts();
+  }
+
+  toggle(){
+    this.toggleFlag = !this.toggleFlag
   }
 
 }
