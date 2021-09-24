@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { SharedComponentsModule } from '../../shared/components/shared-components.module'
 import { NgModule } from '@angular/core';
 
@@ -8,6 +9,7 @@ import { FaqComponent } from './faq.component';
 @NgModule({
   declarations: [FaqComponent],
   imports: [
+    CommonModule,
     SharedComponentsModule,
     FaqRoutingModule
   ]

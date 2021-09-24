@@ -1,9 +1,13 @@
 <p>home works!</p>
 <app-widget-a></app-widget-a>
 <app-widget-b></app-widget-b>
+<button (click)="reset()">Reset Data</button>
+<button (click)="reloadData()">Reload Data</button>
 
-<div *ngFor="let data of apiData$ | async">
-    <li>{{data.title}}, {{data.id}}</li>
-</div>
 
-<!-- <pre>{{ apiData$ | async | json }}</pre> -->
+<li *ngFor="let data of apiData$ | async">{{data.title}}, {{data.id}}</li>
+
+<hr>
+<app-home-widget></app-home-widget>
+
+

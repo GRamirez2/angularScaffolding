@@ -1,4 +1,4 @@
-import { SampleStoreService } from '../../shared/services/sampleA/sample-store.service';
+import { SampleStoreService } from '../../shared/services';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -17,6 +17,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.sampleStoreService.loadPosts();
 
+  }
+
+  reset(){
+    this.sampleStoreService.reset();
+  }
+
+  reloadData(){
+    this.sampleStoreService.loadPosts();
   }
 
 }

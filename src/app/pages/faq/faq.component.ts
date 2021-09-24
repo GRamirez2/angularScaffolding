@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SampleStoreService } from '../../shared/services';
 
 @Component({
   selector: 'app-faq',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private sampleStoreService: SampleStoreService
+  ) { }
+
+  apiData$= this.sampleStoreService.dataSample$
 
   ngOnInit(): void {
+
   }
 
 }
