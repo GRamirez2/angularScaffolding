@@ -26,22 +26,23 @@ export class SampleStoreService {
 }]
 
 
-  private dataSample = new Subject();
+  private dataSample = new BehaviorSubject(this.starterData);
   dataSample$ = this.dataSample.asObservable();
 
   reset(){
-    this.dataSample.next();
+    this.dataSample.next(this.starterData);
   }
 
-  // private getValue() {
-  //   return this.dataSample.getValue();
-  // }
+  private getValue() {
+    return this.dataSample.getValue();
+  }
 
   loadPosts(){
-    this.sampleService.getData()
-    .subscribe((posts: idataSample) => {
-      this.dataSample.next(posts)
-    });
+    if (this.getValue().length === 1){
+      this.sampleService.getData()
+      .subscribe((posts: idataSample[]) => this.dataSample.next(posts));
+    }
+    
   }
 
 }

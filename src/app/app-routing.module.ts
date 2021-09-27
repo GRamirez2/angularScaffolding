@@ -1,10 +1,8 @@
-import { HomeModule } from './pages/home/home.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-
   {
     path: '',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
@@ -17,6 +15,7 @@ const routes: Routes = [
     path: 'faq',
     loadChildren: () => import('./pages/faq/faq.module').then(m => m.FaqModule)
   },
+
   {
     path: 'search',
     loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule)
@@ -28,11 +27,12 @@ const routes: Routes = [
   {
     path: 'subscriptions',
     loadChildren: () => import('./pages/subscriptions/subscriptions.module').then(m => m.SubscriptionsModule)
-  },
-  {
-    path: '**',
-    redirectTo: 'home'
   }
+  // ,
+  // {
+  //   path: '**',
+  //   redirectTo: ''
+  // }
 ];
 
 @NgModule({

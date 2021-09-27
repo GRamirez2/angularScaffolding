@@ -11,11 +11,11 @@ export class HomeWidgetComponent implements OnInit {
     private sampleStoreService: SampleStoreService
   ) { }
 
-  apiData$
+  apiData$ = this.sampleStoreService.dataSample$
 
 
   ngOnInit(): void {
-    this.apiData$ = this.sampleStoreService.dataSample$
+
   }
 
 

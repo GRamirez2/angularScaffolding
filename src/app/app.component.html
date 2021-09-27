@@ -1,1 +1,14 @@
-<app-main-layout></app-main-layout>
+<div class="main-container">
+    <nav class="top-header">
+        <a routerLink="/">Home</a> <span> | </span>
+        <a routerLink="/faq">FAQ</a><span> | </span>
+        <a routerLink="/enterprise">Enterprise</a><span> | </span>
+        <a routerLink="/subscriptions">Subscriptions</a><span> | </span>
+        <a routerLink="/search">Search</a><span> | </span>
+        <a routerLink="/slo">SLO</a>
+    </nav>
+    <router-outlet></router-outlet>
+    <footer class="main-footer">
+        <p>Footer</p>
+    </footer>
+</div>

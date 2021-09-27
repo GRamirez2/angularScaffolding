@@ -1,0 +1,8 @@
+<p>sub-home works!</p>
+
+<div *ngIf="apiData$ | async;  else elseBlock "> 
+    <p>We have data</p>
+</div>
+
+<ng-template #elseBlock>We DO NOT HAVE data</ng-template>
+
