@@ -1,13 +1,8 @@
 import { SampleService } from './sample.service';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { idataSample } from '../../models/data.model';
 
-export interface idataSample {
-      userId: number;
-      id: number;
-      title: string;
-      body: string;
-}
 
 @Injectable({
   providedIn: 'root'
