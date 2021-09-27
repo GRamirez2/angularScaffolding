@@ -27,12 +27,11 @@ const routes: Routes = [
   {
     path: 'subscriptions',
     loadChildren: () => import('./pages/subscriptions/subscriptions.module').then(m => m.SubscriptionsModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/error404/error404-routing.module').then(m => m.Error404RoutingModule)
   }
-  // ,
-  // {
-  //   path: '**',
-  //   redirectTo: ''
-  // }
 ];
 
 @NgModule({
