@@ -1,8 +1,12 @@
 <p>sub-home works!</p>
 
-<div *ngIf="apiData$ | async;  else elseBlock "> 
+<div *ngIf="apiData$ | async; else elseBlock ">
     <p>We have data</p>
+    <div *ngFor="let data of apiData$ | async; index as i">
+        <li *ngIf="i % 2 == 0">{{ data.title }}</li>
+    </div>
 </div>
+
 
 <ng-template #elseBlock>We DO NOT HAVE data</ng-template>
 
